@@ -3,4 +3,5 @@
 .idea
 .settings
 .classpath
+out
 EximDataMigration.iml
