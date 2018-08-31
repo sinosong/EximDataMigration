@@ -1,6 +1,6 @@
 package com.hns.util;
 
-import java.io.FileOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -112,6 +112,26 @@ public class CreateExcelUtil {
             centerVal[i][1] = (zx.getProductname() == null  || "".equals(zx.getProductname())) ? "-":zx.getProductname();
         }
         createUserExcel(false,titles,centerVal);
+    }
+
+    /**
+     * 大文件读取
+     * @param filepath
+     */
+    public static void readFromFile(String filepath){
+
+        try {
+            File file = new File(filepath);
+            BufferedInputStream fis = new BufferedInputStream(new FileInputStream(file));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(fis,"utf-8"),5*1024*1024);// 用5M的缓冲读取文本文件
+
+            String line = "";
+            while((line = reader.readLine()) != null){
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 
