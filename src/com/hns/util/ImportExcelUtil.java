@@ -23,7 +23,7 @@ public class ImportExcelUtil {
 	private static final String EXCEL_XLSX = "xlsx";
 
 	/**
-	 * ÅĞ¶ÏExcelµÄ°æ±¾,»ñÈ¡Workbook
+	 * åˆ¤æ–­Excelçš„ç‰ˆæœ¬,è·å–Workbook
 	 * 
 	 * @param in
 	 * @param filename
@@ -42,22 +42,22 @@ public class ImportExcelUtil {
 	}
 
 	/**
-	 * ÅĞ¶ÏÎÄ¼şÊÇ·ñÊÇexcel
+	 * åˆ¤æ–­æ–‡ä»¶æ˜¯å¦æ˜¯excel
 	 * 
 	 * @throws Exception
 	 */
 	public static void checkExcelVaild(File file) throws Exception {
 		if (!file.exists()) {
-			throw new Exception("ÎÄ¼ş²»´æÔÚ");
+			throw new Exception("æ–‡ä»¶ä¸å­˜åœ¨");
 		}
 		if (!(file.isFile() && (file.getName().endsWith(EXCEL_XLS) || file
 				.getName().endsWith(EXCEL_XLSX)))) {
-			throw new Exception("ÎÄ¼ş²»ÊÇExcel");
+			throw new Exception("æ–‡ä»¶ä¸æ˜¯Excel");
 		}
 	}
 
 	/**
-	 * ¶ÁÈ¡Excel²âÊÔ£¬¼æÈİ Excel 2003/2007/2010
+	 * è¯»å–Excelæµ‹è¯•ï¼Œå…¼å®¹ Excel 2003/2007/2010
 	 * 
 	 * @throws Exception
 	 */
@@ -65,43 +65,43 @@ public class ImportExcelUtil {
 
 		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
 		try {
-			// Í¬Ê±Ö§³ÖExcel 2003¡¢2007
-			File excelFile = new File("G:/test/poi/bl.xlsx"); // ´´½¨ÎÄ¼ş¶ÔÏó
-			FileInputStream in = new FileInputStream(excelFile); // ÎÄ¼şÁ÷
+			// åŒæ—¶æ”¯æŒExcel 2003ã€2007
+			File excelFile = new File("G:/test/poi/bl.xlsx"); // åˆ›å»ºæ–‡ä»¶å¯¹è±¡
+			FileInputStream in = new FileInputStream(excelFile); // æ–‡ä»¶æµ
 			checkExcelVaild(excelFile);
 			Workbook workbook = getWorkbok(in, excelFile);
-			// Workbook workbook = WorkbookFactory.create(is); // ÕâÖÖ·½Ê½
-			// Excel2003/2007/2010¶¼ÊÇ¿ÉÒÔ´¦ÀíµÄ
+			// Workbook workbook = WorkbookFactory.create(is); // è¿™ç§æ–¹å¼
+			// Excel2003/2007/2010éƒ½æ˜¯å¯ä»¥å¤„ç†çš„
 
-			int sheetCount = workbook.getNumberOfSheets(); // SheetµÄÊıÁ¿
+			int sheetCount = workbook.getNumberOfSheets(); // Sheetçš„æ•°é‡
 
 			/**
-			 * ÉèÖÃµ±Ç°excelÖĞsheetµÄÏÂ±ê£º0¿ªÊ¼
+			 * è®¾ç½®å½“å‰excelä¸­sheetçš„ä¸‹æ ‡ï¼š0å¼€å§‹
 			 */
-			Sheet sheet = workbook.getSheetAt(0); // ±éÀúµÚÒ»¸öSheet
-			// Sheet sheet = workbook.getSheetAt(2); // ±éÀúµÚÈı¸öSheet
+			Sheet sheet = workbook.getSheetAt(0); // éå†ç¬¬ä¸€ä¸ªSheet
+			// Sheet sheet = workbook.getSheetAt(2); // éå†ç¬¬ä¸‰ä¸ªSheet
 
-			// »ñÈ¡×ÜĞĞÊı
+			// è·å–æ€»è¡Œæ•°
 			// System.out.println(sheet.getLastRowNum());
 
 			int count = 0;
 			for (Row row : sheet) {
 				try {
-					// Ìø¹ıµÚÒ»ºÍµÚ¶şĞĞµÄÄ¿Â¼
+					// è·³è¿‡ç¬¬ä¸€å’Œç¬¬äºŒè¡Œçš„ç›®å½•
 					if (count < 2) {
 						count++;
 						continue;
 					}
 
-					// Èç¹ûµ±Ç°ĞĞÃ»ÓĞÊı¾İ£¬Ìø³öÑ­»·
+					// å¦‚æœå½“å‰è¡Œæ²¡æœ‰æ•°æ®ï¼Œè·³å‡ºå¾ªç¯
 					if (row.getCell(0).toString().equals("")) {
 						return;
 					}
 
-					// »ñÈ¡×ÜÁĞÊı(¿Õ¸ñµÄ²»¼ÆËã)
+					// è·å–æ€»åˆ—æ•°(ç©ºæ ¼çš„ä¸è®¡ç®—)
 					// int columnTotalNum = row.getPhysicalNumberOfCells();
-					// System.out.println("×ÜÁĞÊı£º" + columnTotalNum);
-					// System.out.println("×î´óÁĞÊı£º" + row.getLastCellNum());
+					// System.out.println("æ€»åˆ—æ•°ï¼š" + columnTotalNum);
+					// System.out.println("æœ€å¤§åˆ—æ•°ï¼š" + row.getLastCellNum());
 
 					int end = row.getLastCellNum();
 
