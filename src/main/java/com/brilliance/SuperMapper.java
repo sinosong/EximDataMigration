@@ -1,4 +1,4 @@
-package com.baomidou.springboot;
+package com.brilliance;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;

@@ -1,9 +1,9 @@
-package com.baomidou.springboot.entity;
-
-import java.io.Serializable;
+package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+
+import java.io.Serializable;
 
 /**
  * 演示实体父类

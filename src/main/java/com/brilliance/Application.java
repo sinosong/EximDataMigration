@@ -1,4 +1,4 @@
-package com.baomidou.springboot;
+package com.brilliance;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,11 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * 文档：http://mp.baomidou.com<br>
  */
 @EnableTransactionManagement
-@SpringBootApplication
-@ComponentScan(basePackages = {
-        "com.baomidou.springboot.config",
-        "com.baomidou.springboot.controller",
-        "com.baomidou.springboot.service"})
+@SpringBootApplication(scanBasePackages = "com.brilliance")
 public class Application {
 
     protected final static Logger logger = LoggerFactory.getLogger(Application.class);
@@ -45,7 +41,8 @@ public class Application {
         app.setBannerMode(Banner.Mode.OFF);
         app.run(args);
         logger.info("PortalApplication is success!");
-        System.err.println("sample started. http://localhost:8080/user/test");
+
+//        System.err.println("sample started. http://localhost:8080/user/test");
     }
 
 }

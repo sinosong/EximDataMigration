@@ -1,4 +1,4 @@
-package com.baomidou.springboot.entity.enums;
+package com.brilliance.entity.enums;
 
 import com.baomidou.mybatisplus.core.enums.IEnum;
 import com.fasterxml.jackson.annotation.JsonFormat;

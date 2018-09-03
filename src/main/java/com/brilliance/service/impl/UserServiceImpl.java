@@ -1,15 +1,13 @@
-package com.baomidou.springboot.service.impl;
-
-import java.util.List;
-
-import org.springframework.stereotype.Service;
+package com.brilliance.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.baomidou.springboot.entity.User;
-import com.baomidou.springboot.mapper.UserMapper;
-import com.baomidou.springboot.service.IUserService;
+import com.brilliance.entity.User;
+import com.brilliance.mapper.UserMapper;
+import com.brilliance.service.IUserService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  *
