@@ -1,8 +1,15 @@
 package com.hns.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 /**
  * 债项
  */
+
+@Entity
+@Table(name = "t_student")
 public class ZXPojo {
 
     String deptcode;
