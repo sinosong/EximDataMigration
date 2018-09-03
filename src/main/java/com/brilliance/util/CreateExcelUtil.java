@@ -92,22 +92,22 @@ public class CreateExcelUtil {
     }
 
 
-    /*public static void main(String[] args) {
-        String[] titles= {"债项编号","产品名称"};
-        List<ZXPojo> zxlist = new ArrayList<ZXPojo>();
-        zxlist.add(new ZXPojo("2018001","产品A"));
-        zxlist.add(new ZXPojo("2018002","产品B"));
-        zxlist.add(new ZXPojo("2018003","产品C"));
-        zxlist.add(new ZXPojo("2018004","产品A"));
-        String[][] centerVal = new String[zxlist.size()][2];
-
-        for (int i = 0; i < zxlist.size(); i++) {
-            ZXPojo zx = zxlist.get(i);
-            centerVal[i][0] = (zx.getDeptcode() == null || "".equals(zx.getDeptcode()))  ? "-":zx.getDeptcode();
-            centerVal[i][1] = (zx.getProductname() == null  || "".equals(zx.getProductname())) ? "-":zx.getProductname();
-        }
-        createUserExcel(false,titles,centerVal);
-    }*/
+    public static void main(String[] args) {
+//        String[] titles= {"债项编号","产品名称"};
+//        List<ZXPojo> zxlist = new ArrayList<ZXPojo>();
+//        zxlist.add(new ZXPojo("2018001","产品A"));
+//        zxlist.add(new ZXPojo("2018002","产品B"));
+//        zxlist.add(new ZXPojo("2018003","产品C"));
+//        zxlist.add(new ZXPojo("2018004","产品A"));
+//        String[][] centerVal = new String[zxlist.size()][2];
+//
+//        for (int i = 0; i < zxlist.size(); i++) {
+//            ZXPojo zx = zxlist.get(i);
+//            centerVal[i][0] = (zx.getDeptcode() == null || "".equals(zx.getDeptcode()))  ? "-":zx.getDeptcode();
+//            centerVal[i][1] = (zx.getProductname() == null  || "".equals(zx.getProductname())) ? "-":zx.getProductname();
+//        }
+//        createUserExcel(false,titles,centerVal);
+    }
 
     /**
      * 大文件读取

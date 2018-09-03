@@ -1,9 +1,8 @@
 package com.brilliance.pojo;
 
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableName;
-import org.ibase4j.core.base.BaseModel;
-import org.ibase4j.model.BizBetInformation;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
