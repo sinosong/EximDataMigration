@@ -1,4 +1,4 @@
-package main.java.com.brilliance.dao;
+package com.brilliance.dao;
 
 import java.io.Serializable;
 import java.util.List;

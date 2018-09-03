@@ -1,4 +1,4 @@
-package main.java.com.brilliance.EximDataMigration;
+package com.brilliance.EximDataMigration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

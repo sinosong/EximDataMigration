@@ -1,4 +1,4 @@
-package main.java.com.brilliance.util;
+package com.brilliance.util;
 
 import java.io.File;
 import java.io.FileInputStream;

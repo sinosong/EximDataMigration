@@ -1,16 +1,12 @@
-package main.java.com.brilliance.util;
+package com.brilliance.util;
+
+import com.brilliance.pojo.ZXPojo;
+import org.apache.commons.io.output.ByteArrayOutputStream;
+import org.apache.poi.xssf.usermodel.*;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import main.java.com.brilliance.pojo.ZXPojo;
-import org.apache.commons.io.output.ByteArrayOutputStream;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  * 使用POI,进行excel相关的操作

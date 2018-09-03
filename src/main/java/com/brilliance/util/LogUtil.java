@@ -1,4 +1,4 @@
-package main.java.com.brilliance.util;
+package com.brilliance.util;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
