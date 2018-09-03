@@ -1,4 +1,4 @@
-package com.brilliance.pojo;
+package main.java.com.brilliance.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name = "t_student")
+@Table(name = "")
 public class ZXPojo {
 
     String deptcode;

@@ -1,7 +1,7 @@
-package com.brilliance.dao.impl;
+package main.java.com.brilliance.dao.impl;
 
-import com.brilliance.dao.IBaseRepository;
-import com.brilliance.util.HibernateUtil;
+import main.java.com.brilliance.dao.IBaseRepository;
+import main.java.com.brilliance.util.HibernateUtil;
 import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
