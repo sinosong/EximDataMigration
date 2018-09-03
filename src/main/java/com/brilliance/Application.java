@@ -1,5 +1,7 @@
 package com.brilliance;
 
+import com.brilliance.service.IUserService;
+import com.brilliance.util.SpringContextUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.Banner;
@@ -41,6 +43,9 @@ public class Application {
         app.setBannerMode(Banner.Mode.OFF);
         app.run(args);
         logger.info("PortalApplication is success!");
+
+        IUserService userService = (IUserService) SpringContextUtils.getBean(IUserService.class);
+        System.out.println(userService);
 
 //        System.err.println("sample started. http://localhost:8080/user/test");
     }

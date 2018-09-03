@@ -1,9 +1,7 @@
 package com.brilliance.pojo;
 
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableName;
-import org.ibase4j.core.base.BaseModel;
-import org.ibase4j.model.BizCreditLines;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -115,7 +113,7 @@ public class BizCustomer extends BaseModel implements Serializable {
      * 用于用信主体中存取值,存储额度信息
      */
     @TableField(exist = false)
-    private List<org.ibase4j.model.BizCreditLines> creditLinesList;
+    private List<BizCreditLines> creditLinesList;
 
 
     /**
@@ -146,7 +144,7 @@ public class BizCustomer extends BaseModel implements Serializable {
         this.creditRatio = creditRatio;
     }
 
-    public List<org.ibase4j.model.BizCreditLines> getCreditLinesList() {
+    public List<BizCreditLines> getCreditLinesList() {
         return creditLinesList;
     }
 
