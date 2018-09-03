@@ -1,4 +1,4 @@
-package com.brilliance.main;
+package main.java.com.brilliance.main;
 
 //test
 public class run {

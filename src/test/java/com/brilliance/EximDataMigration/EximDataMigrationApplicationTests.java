@@ -1,4 +1,4 @@
-package com.brilliance.EximDataMigration;
+package test.java.com.brilliance.EximDataMigration;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

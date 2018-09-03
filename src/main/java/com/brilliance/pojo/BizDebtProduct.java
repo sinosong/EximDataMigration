@@ -1,4 +1,4 @@
-package com.brilliance.pojo;
+package main.java.com.brilliance.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
