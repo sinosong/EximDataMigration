@@ -1,6 +1,6 @@
-package com.hns.dao.impl;
+package com.brilliance.dao.impl;
 
-import com.hns.dao.IBaseRepository;
+import com.brilliance.dao.IBaseRepository;
 import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;

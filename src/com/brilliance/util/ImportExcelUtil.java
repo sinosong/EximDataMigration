@@ -1,4 +1,4 @@
-package com.hns.util;
+package com.brilliance.util;
 
 import java.io.File;
 import java.io.FileInputStream;

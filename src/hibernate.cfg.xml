@@ -22,7 +22,7 @@
         <!-- Drop and re-create the database schema on startup -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
         <!--<mapping resource="com/hns/pojo/xml/ZXPojo.hbm.xml"/>-->
-        <mapping class="com.hns.pojo.BizDebtMain"/>
-        <mapping class="com.hns.pojo.BizDebtProduct"/>
+        <mapping class="com.brilliance.pojo.BizDebtMain"/>
+        <mapping class="com.brilliance.pojo.BizDebtProduct"/>
     </session-factory>
 </hibernate-configuration>

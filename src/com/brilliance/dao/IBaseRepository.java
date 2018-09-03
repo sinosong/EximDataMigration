@@ -1,4 +1,4 @@
-package com.hns.dao;
+package com.brilliance.dao;
 
 import java.io.Serializable;
 import java.util.List;

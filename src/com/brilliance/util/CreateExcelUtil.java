@@ -1,10 +1,10 @@
-package com.hns.util;
+package com.brilliance.util;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hns.pojo.ZXPojo;
+import com.brilliance.pojo.ZXPojo;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
