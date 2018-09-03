@@ -1,6 +1,5 @@
 package com.brilliance.util;
 
-import com.brilliance.pojo.ZXPojo;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.poi.xssf.usermodel.*;
 
@@ -93,7 +92,7 @@ public class CreateExcelUtil {
     }
 
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         String[] titles= {"债项编号","产品名称"};
         List<ZXPojo> zxlist = new ArrayList<ZXPojo>();
         zxlist.add(new ZXPojo("2018001","产品A"));
@@ -108,7 +107,7 @@ public class CreateExcelUtil {
             centerVal[i][1] = (zx.getProductname() == null  || "".equals(zx.getProductname())) ? "-":zx.getProductname();
         }
         createUserExcel(false,titles,centerVal);
-    }
+    }*/
 
     /**
      * 大文件读取
