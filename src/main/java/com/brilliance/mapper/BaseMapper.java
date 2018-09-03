@@ -4,12 +4,6 @@
 package com.brilliance.mapper;
 
 import com.brilliance.entity.BaseModel;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.session.RowBounds;
-
-import java.io.Serializable;
-import java.util.List;
-import java.util.Map;
 
 /**
  * 
