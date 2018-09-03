@@ -13,7 +13,7 @@ import java.io.Serializable;
 
 @TableName("BIZ_CONTRACT_COLLATERAL")
 @SuppressWarnings("serial")
-public class BizBetInformation extends SuperEntity<BizBetInformation> implements Serializable {
+public class BizBetInformation extends BaseModel implements Serializable {
     /**
      * 担保合同编号
      */

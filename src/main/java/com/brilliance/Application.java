@@ -1,19 +1,14 @@
 package com.brilliance;
 
 import com.brilliance.entity.BizCBE;
-import com.brilliance.entity.User;
 import com.brilliance.service.IBizCBEService;
-import com.brilliance.service.IUserService;
 import com.brilliance.util.SpringContextUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-import java.util.List;
 
 /**
  * mybatis-plus Spring Boot 测试 Demo<br>
