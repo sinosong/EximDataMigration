@@ -7,7 +7,7 @@ import java.util.Date;
 
 @TableName("BIZ_SIGLE_PRODUCT_RULE")
 @SuppressWarnings("serial")
-public class BizSingleProductRule extends SuperEntity<BizSingleProductRule> implements Serializable {
+public class BizSingleProductRule extends BaseModel implements Serializable {
 
     /**
      * 业务编号

@@ -4,6 +4,8 @@ package com.brilliance.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 
+import java.io.Serializable;
+
 /**
  * 功能：客户类型表
  *
@@ -11,7 +13,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
  * 日期：2018/7/6
  */
 @TableName("BIZ_PTS")
-public class BizPTS extends SuperEntity<BizPTS>  {
+public class BizPTS extends BaseModel implements Serializable {
     /**
      * 业务表名称（XXD）
      */

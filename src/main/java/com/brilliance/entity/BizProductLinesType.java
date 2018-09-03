@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 
 @TableName("BIZ_PRODUCT_LINESTYPE")
-public class BizProductLinesType extends SuperEntity<BizProductLinesType> implements Serializable {
+public class BizProductLinesType extends BaseModel implements Serializable {
 
     /**
      * 债项方案id

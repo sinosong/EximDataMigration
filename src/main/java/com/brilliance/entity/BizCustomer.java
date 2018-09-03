@@ -15,7 +15,7 @@ import java.util.List;
 
 @TableName("BIZ_CUSTOMER")
 @SuppressWarnings("serial")
-public class BizCustomer extends SuperEntity<BizCustomer> implements Serializable {
+public class BizCustomer extends BaseModel implements Serializable {
 
     /**
      * 债项方案id

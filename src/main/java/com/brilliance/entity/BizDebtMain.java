@@ -15,7 +15,7 @@ import java.util.Set;
  */
 
 @TableName("BIZ_DEBT_MAIN")
-public class BizDebtMain extends SuperEntity<BizDebtMain> implements Serializable {
+public class BizDebtMain extends BaseModel implements Serializable {
 
     /**
      * 债项方案id
