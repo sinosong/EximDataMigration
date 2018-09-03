@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.baomidou.springboot.mapper.BizCBEMapper">
+<mapper namespace="com.brilliance.mapper.BizCBEMapper">
+    <select id="selectIdPage" resultType="java.lang.Long">
+        select id_ from BIZ_CBE
+        <where>
+            <if test="cm.objType != null and cm.objType != ''">
+                and OBJTYP = #{cm.objType}
+            </if>
+            <if test="cm.objInr != null and cm.objInr != ''">
+                and OBJINR = #{cm.objInr}
+            </if>
+            <if test="cm.cbt != null and cm.cbt != ''">
+                and CBT = #{cm.cbt}
+            </if>
+            <if test="cm.trninr != null and cm.trninr != ''">
+                and TRNINR = #{cm.trninr}
+            </if>
+            <if test="cm.trntyp != null and cm.trntyp != ''">
+                and TRNTYP = #{cm.trntyp}
+            </if>
+            <if test="cm.keyword != null and cm.keyword != ''">
+                and (DAT like '%'||#{cm.keyword}||'%')
+            </if>
+        </where>
+    </select>
 
+
+    <select id="selectById" resultType="com.brilliance.entity.BizCBE">
+        select * from  BIZ_CBE where id_=#{id}
+    </select>
 
 </mapper>

@@ -58,9 +58,9 @@ public class Application {
 
         System.out.println(userService);*/
         IBizCBEService cbeService = (IBizCBEService) SpringContextUtils.getBean(IBizCBEService.class);
-        BizCBE cbe = cbeService.getById(1L);
+        BizCBE cbe = cbeService(1L);
         System.out.println(cbe.toString());
-        System.exit(0);
+//        System.exit(0);
 
     }
 
