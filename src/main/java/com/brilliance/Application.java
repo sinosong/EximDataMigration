@@ -1,5 +1,6 @@
 package com.brilliance;
 
+import com.brilliance.entity.User;
 import com.brilliance.service.IUserService;
 import com.brilliance.util.SpringContextUtils;
 import org.slf4j.Logger;
@@ -9,6 +10,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import java.util.List;
 
 /**
  * mybatis-plus Spring Boot 测试 Demo<br>
@@ -45,6 +48,12 @@ public class Application {
         logger.info("PortalApplication is success!");
 
         IUserService userService = (IUserService) SpringContextUtils.getBean(IUserService.class);
+     List<User> users =userService.selectListBySQL();
+        for(User u:users)
+        {
+            System.out.println(u.toString());
+        }
+
         System.out.println(userService);
 
 //        System.err.println("sample started. http://localhost:8080/user/test");
