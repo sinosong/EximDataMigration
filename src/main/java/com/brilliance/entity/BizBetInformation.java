@@ -1,8 +1,7 @@
-package com.brilliance.pojo;
+package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import java.io.Serializable;
 
 /**
@@ -14,7 +13,7 @@ import java.io.Serializable;
 
 @TableName("BIZ_CONTRACT_COLLATERAL")
 @SuppressWarnings("serial")
-public class BizBetInformation extends BaseModel implements Serializable {
+public class BizBetInformation extends SuperEntity<BizBetInformation> implements Serializable {
     /**
      * 担保合同编号
      */

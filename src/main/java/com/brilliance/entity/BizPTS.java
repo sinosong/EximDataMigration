@@ -1,4 +1,4 @@
-package com.brilliance.pojo;
+package com.brilliance.entity;
 
 
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -11,7 +11,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
  * 日期：2018/7/6
  */
 @TableName("BIZ_PTS")
-public class BizPTS extends BaseModel {
+public class BizPTS extends SuperEntity<BizPTS>  {
     /**
      * 业务表名称（XXD）
      */

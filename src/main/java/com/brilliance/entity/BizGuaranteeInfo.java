@@ -1,8 +1,7 @@
-package com.brilliance.pojo;
+package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
@@ -16,7 +15,7 @@ import java.util.List;
 
 @TableName("BIZ_GUARANTEE_INFO")
 @SuppressWarnings("serial")
-public class BizGuaranteeInfo extends BaseModel implements Serializable {
+public class BizGuaranteeInfo extends SuperEntity<BizGuaranteeInfo> implements Serializable {
 
     /**
      * 债项方案id

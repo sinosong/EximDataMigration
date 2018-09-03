@@ -1,8 +1,7 @@
-package com.brilliance.pojo;
+package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import java.io.Serializable;
 
 /**
@@ -13,7 +12,7 @@ import java.io.Serializable;
  */
 
 @TableName("BIZ_PRODUCT_LINESTYPE")
-public class BizProductLinesType extends BaseModel implements Serializable {
+public class BizProductLinesType extends SuperEntity<BizProductLinesType> implements Serializable {
 
     /**
      * 债项方案id

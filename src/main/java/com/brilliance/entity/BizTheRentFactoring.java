@@ -1,8 +1,7 @@
-package com.brilliance.pojo;
+package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import java.io.Serializable;
 
 /**
@@ -13,7 +12,7 @@ import java.io.Serializable;
  */
 
 @TableName("BIZ_RENTAL_FACTORING_KEY")
-public class BizTheRentFactoring extends BaseModel implements Serializable {
+public class BizTheRentFactoring extends SuperEntity<BizTheRentFactoring> implements Serializable {
 
     /**
      * 业务编号

@@ -1,8 +1,7 @@
-package com.brilliance.pojo;
+package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -14,7 +13,7 @@ import java.util.Date;
  */
 @TableName("BIZ_TRN")
 @SuppressWarnings("serial")
-public class BizTRN extends BaseModel {
+public class BizTRN  extends SuperEntity<BizTRN> {
     /**
      * 存盘时间
      */
