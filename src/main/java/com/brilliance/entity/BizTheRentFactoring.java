@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 
 @TableName("BIZ_RENTAL_FACTORING_KEY")
-public class BizTheRentFactoring extends SuperEntity<BizTheRentFactoring> implements Serializable {
+public class BizTheRentFactoring extends BaseModel implements Serializable {
 
     /**
      * 业务编号

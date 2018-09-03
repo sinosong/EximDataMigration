@@ -15,7 +15,7 @@ import java.util.List;
 
 @TableName("BIZ_GUARANTEE_INFO")
 @SuppressWarnings("serial")
-public class BizGuaranteeInfo extends SuperEntity<BizGuaranteeInfo> implements Serializable {
+public class BizGuaranteeInfo extends BaseModel implements Serializable {
 
     /**
      * 债项方案id

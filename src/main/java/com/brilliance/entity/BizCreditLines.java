@@ -13,7 +13,7 @@ import java.util.Date;
  */
 
 @TableName("BIZ_CREDIT_LINES")
-public class BizCreditLines extends SuperEntity<BizCreditLines> implements Serializable {
+public class BizCreditLines extends BaseModel implements Serializable {
 
     /**
      * 债项方案id

@@ -13,7 +13,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
  */
 @TableName("BIZ_CBB")
 @SuppressWarnings("serial")
-public class BizCBB extends SuperEntity<BizCBB> implements Serializable {
+public class BizCBB extends BaseModel implements Serializable {
     /**
      * 业务类型
      */
