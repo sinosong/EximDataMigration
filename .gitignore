@@ -5,3 +5,6 @@
 .classpath
 out
 EximDataMigration.iml
+EximDataMigration.ipr
+EximDataMigration.iws
+target
