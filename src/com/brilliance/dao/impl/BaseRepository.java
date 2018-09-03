@@ -1,6 +1,7 @@
 package com.brilliance.dao.impl;
 
 import com.brilliance.dao.IBaseRepository;
+import com.brilliance.util.HibernateUtil;
 import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
@@ -16,11 +17,32 @@ import java.util.Map;
  * dao层基础实现类
  *
  * @param <T>
- * @author Administrator
+ *
  */
 @SuppressWarnings({"unchecked","rawtypes"})
 public class BaseRepository<T> implements IBaseRepository<T> {
+
     private SessionFactory sessionFactory;
+
+    public Session getSession(){
+        return HibernateUtil.getSessionFactory().getCurrentSession();
+    }
+
+    public void beginTransaction(Session session){
+        session.beginTransaction();
+    }
+
+    public void commitTransaction(Session session) {
+        session.getTransaction().commit();
+    }
+
+    public void rollbackTransaction(Session session) {
+        session.getTransaction().rollback();
+    }
+
+    public void closeSession(Session session) {
+        session.close();
+    }
 
     protected Session openSession() {
         return sessionFactory.getCurrentSession();
