@@ -1,6 +1,8 @@
 package com.brilliance;
 
+import com.brilliance.entity.BizCBE;
 import com.brilliance.entity.User;
+import com.brilliance.service.IBizCBEService;
 import com.brilliance.service.IUserService;
 import com.brilliance.util.SpringContextUtils;
 import org.slf4j.Logger;
@@ -47,16 +49,19 @@ public class Application {
         app.run(args);
         logger.info("PortalApplication is success!");
 
-        IUserService userService = (IUserService) SpringContextUtils.getBean(IUserService.class);
-     List<User> users =userService.selectListBySQL();
+        /*IUserService userService = (IUserService) SpringContextUtils.getBean(IUserService.class);
+        List<User> users =userService.selectListBySQL();
         for(User u:users)
         {
             System.out.println(u.toString());
         }
 
-        System.out.println(userService);
+        System.out.println(userService);*/
+        IBizCBEService cbeService = (IBizCBEService) SpringContextUtils.getBean(IBizCBEService.class);
+        BizCBE cbe = cbeService.getById(1L);
+        System.out.println(cbe.toString());
+        System.exit(0);
 
-//        System.err.println("sample started. http://localhost:8080/user/test");
     }
 
 }
