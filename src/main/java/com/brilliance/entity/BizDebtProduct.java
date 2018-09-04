@@ -2,6 +2,8 @@ package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.google.common.base.MoreObjects;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
@@ -80,5 +82,16 @@ public class BizDebtProduct extends BaseModel implements Serializable {
 
     public void setBackgroundNationality(String backgroundNationality) {
         this.backgroundNationality = backgroundNationality;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("debtCode", debtCode)
+                .add("businessType", businessType)
+                .add("productName", productName)
+                .add("industryInvestment", industryInvestment)
+                .add("backgroundNationality", backgroundNationality)
+                .toString();
     }
 }

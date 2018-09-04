@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.google.common.base.MoreObjects;
 
 /**
  * 功能：金额流水信息表
@@ -210,5 +211,24 @@ public class BizCBB extends BaseModel implements Serializable {
         this.xcoamt = xcoamt;
     }
 
-
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("objType", objType)
+                .add("objInr", objInr)
+                .add("cbeInr", cbeInr)
+                .add("cbc", cbc)
+                .add("extid", extid)
+                .add("begdat", begdat)
+                .add("enddat", enddat)
+                .add("cur", cur)
+                .add("amt", amt)
+                .add("xrfcur", xrfcur)
+                .add("xrfamt", xrfamt)
+                .add("comcur", comcur)
+                .add("comamt", comamt)
+                .add("xcocur", xcocur)
+                .add("xcoamt", xcoamt)
+                .toString();
+    }
 }

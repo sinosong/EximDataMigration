@@ -2,6 +2,8 @@ package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.google.common.base.MoreObjects;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -508,4 +510,46 @@ public class BizDebtMain extends BaseModel implements Serializable {
         this.solutionState = solutionState;
     }
 
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("debtCode", debtCode)
+                .add("projectName", projectName)
+                .add("bankTellerId", bankTellerId)
+                .add("processInitiatTime", processInitiatTime)
+                .add("validityCcycleGauge", validityCcycleGauge)
+                .add("pgEffectivDate", pgEffectivDate)
+                .add("pgExpiDate", pgExpiDate)
+                .add("ls", ls)
+                .add("ruleType", ruleType)
+                .add("ltnopa", ltnopa)
+                .add("tdwln", tdwln)
+                .add("mpc", mpc)
+                .add("solutionAmount", solutionAmount)
+                .add("aCurrrency", aCurrrency)
+                .add("oc", oc)
+                .add("dopo", dopo)
+                .add("progRateType", progRateType)
+                .add("schemeRateForm", schemeRateForm)
+                .add("rateRangeMix", rateRangeMix)
+                .add("rateRangeMax", rateRangeMax)
+                .add("packageRate", packageRate)
+                .add("approve", approve)
+                .add("raaa", raaa)
+                .add("whetherRateDiscount", whetherRateDiscount)
+                .add("programRateDiscount", programRateDiscount)
+                .add("descriptionRateRules", descriptionRateRules)
+                .add("brifBackground", brifBackground)
+                .add("tradBackground", tradBackground)
+                .add("businessBackgroundBrief", businessBackgroundBrief)
+                .add("goodsSketch", goodsSketch)
+                .add("policyDescription", policyDescription)
+                .add("policy", policy)
+                .add("proposer", proposer)
+                .add("proposerNum", proposerNum)
+                .add("singleBtch", singleBtch)
+                .add("institutionCode", institutionCode)
+                .add("solutionState", solutionState)
+                .toString();
+    }
 }

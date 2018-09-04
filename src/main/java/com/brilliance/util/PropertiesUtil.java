@@ -4,17 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.MissingResourceException;
 
-import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
-import org.springframework.context.annotation.Configuration;
-
 /**
  * Parsing The Configuration File
  *
  * @author ShenHuaJie
  * @version 2016年7月30日 下午11:41:53
  */
-@Configuration
-public class PropertiesUtil extends PropertyPlaceholderConfigurer {
+public class PropertiesUtil {
     private static Map<String, String> ctxPropertiesMap = new HashMap<String, String>();
 
     public static Map<String, String> getProperties() {

@@ -2,6 +2,8 @@ package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.google.common.base.MoreObjects;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -157,6 +159,23 @@ public class BizCreditLines extends BaseModel implements Serializable {
 
     public void setCustNo(String custNo) {
         this.custNo = custNo;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("debtCode", debtCode)
+                .add("customerId", customerId)
+                .add("custNo", custNo)
+                .add("amountType", amountType)
+                .add("creditNo", creditNo)
+                .add("creditLineName", creditLineName)
+                .add("totalAmount", totalAmount)
+                .add("usedAmount", usedAmount)
+                .add("availableBalance", availableBalance)
+                .add("startDate", startDate)
+                .add("maturityDate", maturityDate)
+                .toString();
     }
 }
 

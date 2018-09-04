@@ -2,6 +2,8 @@ package com.brilliance.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.google.common.base.MoreObjects;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -297,28 +299,28 @@ public class BizCustomer extends BaseModel implements Serializable {
 
     @Override
     public String toString() {
-        return "BizCustomer{" +
-                "debtCode='" + debtCode + '\'' +
-                ", custNo='" + custNo + '\'' +
-                ", organizationCode=" + organizationCode +
-                ", custNameCN='" + custNameCN + '\'' +
-                ", custNameEN='" + custNameEN + '\'' +
-                ", custAddressCN='" + custAddressCN + '\'' +
-                ", custAddressEN='" + custAddressEN + '\'' +
-                ", custBusinessUnit='" + custBusinessUnit + '\'' +
-                ", custRegistrastionType='" + custRegistrastionType + '\'' +
-                ", custRatingCreditType='" + custRatingCreditType + '\'' +
-                ", custScale='" + custScale + '\'' +
-                ", groupNumber='" + groupNumber + '\'' +
-                ", groupName='" + groupName + '\'' +
-                ", mainBusiness='" + mainBusiness + '\'' +
-                ", custCountry='" + custCountry + '\'' +
-                ", creditRating='" + creditRating + '\'' +
-                ", ratiTime=" + ratiTime +
-                ", custManager='" + custManager + '\'' +
-                ", creditLinesList=" + creditLinesList +
-                ", creditLinesId=" + creditLinesId +
-                ", creditRatio='" + creditRatio + '\'' +
-                '}';
+        return MoreObjects.toStringHelper(this)
+                .add("debtCode", debtCode)
+                .add("custNo", custNo)
+                .add("organizationCode", organizationCode)
+                .add("custNameCN", custNameCN)
+                .add("custNameEN", custNameEN)
+                .add("custAddressCN", custAddressCN)
+                .add("custAddressEN", custAddressEN)
+                .add("custBusinessUnit", custBusinessUnit)
+                .add("custRegistrastionType", custRegistrastionType)
+                .add("custRatingCreditType", custRatingCreditType)
+                .add("custScale", custScale)
+                .add("groupNumber", groupNumber)
+                .add("groupName", groupName)
+                .add("mainBusiness", mainBusiness)
+                .add("custCountry", custCountry)
+                .add("creditRating", creditRating)
+                .add("ratiTime", ratiTime)
+                .add("custManager", custManager)
+                .add("creditLinesList", creditLinesList)
+                .add("creditLinesId", creditLinesId)
+                .add("creditRatio", creditRatio)
+                .toString();
     }
 }

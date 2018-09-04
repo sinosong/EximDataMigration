@@ -1,14 +1,14 @@
 package com.brilliance;
 
-import com.brilliance.entity.BizCBE;
-import com.brilliance.service.IBizCBEService;
+import com.brilliance.entity.BizCBB;
+import com.brilliance.service.IBizCBBService;
+import com.brilliance.util.PropertiesUtil;
 import com.brilliance.util.SpringContextUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @EnableTransactionManagement
 @SpringBootApplication(scanBasePackages = "com.brilliance")
-@PropertySource("classpath:config.properties")
 public class Application {
 
     protected final static Logger logger = LoggerFactory.getLogger(Application.class);
@@ -54,9 +53,12 @@ public class Application {
         }
 
         System.out.println(userService);*/
-        IBizCBEService cbeService = (IBizCBEService) SpringContextUtils.getBean(IBizCBEService.class);
-        BizCBE cbe = cbeService.getById(1L);
+//        IBizCBEService cbeService = (IBizCBEService) SpringContextUtils.getBean(IBizCBEService.class);
+        IBizCBBService cbbService = (IBizCBBService) SpringContextUtils.getBean(IBizCBBService.class);
+        BizCBB cbe = cbbService.getById(1029568279279910914L);
         System.out.println(cbe);
+//        System.out.println(CustomPropertyConfigurer.getProperties().size());
+        System.out.println(PropertiesUtil.getString("mybatis.dialectType"));
 //        System.out.println(cbe.toString());
 //        System.exit(0);
 
